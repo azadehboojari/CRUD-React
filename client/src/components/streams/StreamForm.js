@@ -1,5 +1,4 @@
 import React from 'react';
-// Field is component, reduxForm is a function
 import {Field, reduxForm } from 'redux-form';
 
 class StreamForm extends React.Component{
@@ -13,9 +12,6 @@ class StreamForm extends React.Component{
             )
         }
     }
-    // renderInput (formProps){    
-        // instead of formProps we deinstructured input
-        // formProps.input ==={input}
     renderInput = ({input, label, meta}) => {
         const className= `field ${meta.error && meta.touched ? 'error': ''}`;
         return (
@@ -27,8 +23,6 @@ class StreamForm extends React.Component{
         )
     }
     onSubmit = (formValues)=> {
-        // dont need to use e.preventDefault() anymore
-        // redux form has this function builting within handleSubmit prop
         this.props.onSubmit(formValues);
     }
 
@@ -53,11 +47,5 @@ const validate =(formValues)=>{
     }
     return errors;
 }
-// reduxForm gonna return a function, and we immediatly 
-// call that function with streamCreate
-// ** unlike connect that takes seprate arguments, 
-// ** reduxform just take a single object, 
-// **any configuration should be within the object
-// export default connect() (reduxForm({form: 'streamCreate', validate})(StreamForm));
 
 export default reduxForm({form: 'streamForm', validate})(StreamForm);
