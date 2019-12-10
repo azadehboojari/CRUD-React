@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "title": "i create this stream",
+      "description": "edited vrion",
+      "id": 1
+    },
+    {
+      "title": "edit",
+      "description": "kjncvknsdkl",
+      "userId": null,
+      "id": 2
+    },
+    {
+      "title": "this is new",
+      "description": "im here",
+      "userId": null,
+      "id": 3
+    }
+  ]
+}
