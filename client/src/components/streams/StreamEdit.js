@@ -21,8 +21,6 @@ class StreamEdit extends React.Component {
             <h3>Edit a Stream</h3>
             <StreamForm 
              initialValues={{title:this.props.stream.title, description: this.props.stream.description}}
-            //  or initialValues ={this.props.stream} for accessing all the items in the stream
-            // initialValues={_.pick(this.props.stream, 'title', 'description)} for picking only the items that are needed
              onSubmit={this.onSubmit} />
         </div>);
     }
